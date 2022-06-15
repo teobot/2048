@@ -5,7 +5,7 @@
 
 ### 🏠 [Homepage](https://github.com/teobot/2048)
 
-### ✨ [Demo](DEMOLOCATION)
+### ✨ [Demo](https://teobot-2048.netlify.app/)
 
 ## Install
 
