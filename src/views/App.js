@@ -127,28 +127,28 @@ function App() {
         for (let j = 0; j < grid[0].length; j++) {
           if (newGrid[i][j] !== 0) {
             if (down || up) {
-              let k = down ? i + 1 : i - 1;
-              if (newGrid[k] !== undefined) {
-                if (newGrid[k][j] === 0) {
-                  newGrid[k][j] = newGrid[i][j];
+              let next = i + (down ? 1 : -1);
+              if (newGrid[next] !== undefined) {
+                if (newGrid[next][j] === 0) {
+                  newGrid[next][j] = newGrid[i][j];
                   newGrid[i][j] = 0;
                   moved = true;
-                } else if (newGrid[k][j] === newGrid[i][j]) {
-                  newGrid[k][j] = newGrid[i][j] * 2;
+                } else if (newGrid[next][j] === newGrid[i][j]) {
+                  newGrid[next][j] = newGrid[i][j] * 2;
                   s += newGrid[i][j] * 2;
                   newGrid[i][j] = 0;
                   moved = true;
                 }
               }
             } else if (left || right) {
-              let k = right ? j + 1 : j - 1;
-              if (newGrid[i][k] !== undefined) {
-                if (newGrid[i][k] === 0) {
-                  newGrid[i][k] = newGrid[i][j];
+              let kk = right ? j + 1 : j - 1;
+              if (newGrid[i][kk] !== undefined) {
+                if (newGrid[i][kk] === 0) {
+                  newGrid[i][kk] = newGrid[i][j];
                   newGrid[i][j] = 0;
                   moved = true;
-                } else if (newGrid[i][k] === newGrid[i][j]) {
-                  newGrid[i][k] = newGrid[i][j] * 2;
+                } else if (newGrid[i][kk] === newGrid[i][j]) {
+                  newGrid[i][kk] = newGrid[i][j] * 2;
                   s += newGrid[i][j] * 2;
                   newGrid[i][j] = 0;
                   moved = true;
@@ -157,9 +157,9 @@ function App() {
             }
           }
         }
-        if (!moved) {
-          moving = false;
-        }
+      }
+      if (!moved) {
+        moving = false;
       }
     }
 
