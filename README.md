@@ -1,6 +1,7 @@
 # Welcome to 2048 👋
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/teobot/2048#readme)
 
+![image](https://github.com/teobot/bucket/blob/main/portfolio/2048-min.png?raw=true)
 > This is my take on the classic 2048 game
 
 ### 🏠 [Homepage](https://github.com/teobot/2048)
